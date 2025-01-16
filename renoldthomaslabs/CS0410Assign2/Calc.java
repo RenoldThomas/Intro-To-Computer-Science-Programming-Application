@@ -20,7 +20,7 @@ public class Calc {
         diff = firstNum - secondNum;
         product = firstNum * secondNum;
         quotient = firstNum / secondNum;
-        average = (firstNum + secondNum) / 2;
+        average = (firstNum + secondNum) / 2.0;
         remainder = firstNum % secondNum;
         
         System.out.println("Sum is " + sum);
