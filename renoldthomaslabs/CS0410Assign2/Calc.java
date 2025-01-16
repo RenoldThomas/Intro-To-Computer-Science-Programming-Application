@@ -19,7 +19,7 @@ public class Calc {
         sum = firstNum + secondNum;
         diff = firstNum - secondNum;
         product = firstNum * secondNum;
-        quotient = firstNum / secondNum;
+        quotient = (double)firstNum / secondNum;
         average = (firstNum + secondNum) / 2.0;
         remainder = firstNum % secondNum;
         
