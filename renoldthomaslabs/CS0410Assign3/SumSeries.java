@@ -9,17 +9,16 @@ import java.util.Scanner;
 
 public class SumSeries {
     public static void main(String[] args) {
-        Scanner powerInput = new Scanner(System.in);
-        Scanner ratioInput = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);
         int highestPower;
         double ratio;
         double sumSeries;
 
         // Get inputs from user
         System.out.println("Enter a positive integer for n (highest power): ");
-        highestPower = powerInput.nextInt();
+        highestPower = userInput.nextInt();
         System.out.println("Enter a real number for r (ratio): ");
-        ratio = ratioInput.nextDouble();
+        ratio = userInput.nextDouble();
 
         // Sum Series Calculations
         sumSeries = ((Math.pow(ratio, highestPower + 1) - ratio) / (ratio - 1));
