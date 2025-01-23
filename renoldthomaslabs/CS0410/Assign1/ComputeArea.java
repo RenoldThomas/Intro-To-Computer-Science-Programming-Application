@@ -1,4 +1,4 @@
-package renoldthomaslabs.CS0410Assign1;
+package renoldthomaslabs.CS0410.Assign1;
 
 // Author: Renold Thomas
 // Filename: ComputeArea.java
