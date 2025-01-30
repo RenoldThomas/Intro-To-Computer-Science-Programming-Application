@@ -25,6 +25,24 @@ public class SphereCylinder {
         System.out.print("Choose calculation: Volume (1), Surface Area (2).... ");
         calculation = userInput.nextInt();
 
+        // Error handling for out of range values
+        if (shape > 2) {
+            System.out.println("Error: Invalid Number");
+            return;
+        }
+        if (shape < 1) {
+            System.out.println("Error: Invalid Number");
+            return;
+        }
+        if (calculation > 2) {
+            System.out.println("Error: Invalid Number");
+            return;
+        }
+        if (calculation < 1) {
+            System.out.println("Error: Invalid Number");
+            return;
+        }
+
         // Calculations and shape decisions
         // Sphere
         if (shape == 1) {
