@@ -90,9 +90,9 @@ public class SportsCenter {
         discountPrice = (concessions.equals("Y")) ? ((parkingCost + activityCost) * CONCESSION_DISCOUNT) : 0;
         totalCost = parkingCost + activityCost - discountPrice;
 
-        System.out.println("Activity Cost: $" + activityCost);
+        System.out.println("\nActivity Cost: $" + activityCost);
         System.out.println("Parking Cost: $" + parkingCost);
         System.out.println("Discount Price: $" + discountPrice);
-        System.out.println("Total Cost: $" + totalCost);
+        System.out.println("Total Cost: $" + totalCost + "\n");
     }
 }
