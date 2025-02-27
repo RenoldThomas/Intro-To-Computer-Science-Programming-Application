@@ -25,16 +25,17 @@ public class SportsCenter {
         final double EM_OFF_PEAK = 3.00;
         final double EM_PARKING = 0.00;
 
-        final double CONCESSION_DISCOUNT = 0.90;
+        final double CONCESSION_DISCOUNT = 0.10;
 
         Scanner input = new Scanner(System.in);
         String membershipType;
         String peakTime;
         String concessions;
-        double hoursSpentInHalfHours;
+        double hours = 0;
+        double extraHoursSpentInHalfHours = 0;
 
-        double activityCost;
-        double parkingCost;
+        double activityCost = 0.00;
+        double parkingCost = 0.00;
         double discountPrice;
         double totalCost;
 
@@ -60,11 +61,38 @@ public class SportsCenter {
         }
 
         System.out.print("How long did you spend in the sports center (in hours)? ");
-        hoursSpentInHalfHours = input.nextDouble() * 2;
-        while (hoursSpentInHalfHours <= 0.0) {
+        hours = input.nextDouble();
+        while (hours <= 0.0) {
             System.out.print("How long did you spend in the sports center (in hours)? ");
-            hoursSpentInHalfHours = input.nextDouble() * 2;
+            hours = input.nextDouble();
         }
-    }
+        extraHoursSpentInHalfHours = (int) Math.ceil((hours-1) * 2);
 
+        switch(membershipType) {
+            case "N":
+                parkingCost = extraHoursSpentInHalfHours * NM_PARKING;
+                activityCost = (peakTime.equals("Y")) ? (hours * NM_PEAK) : (hours * NM_OFF_PEAK);
+                break;
+            case "M":
+                parkingCost = extraHoursSpentInHalfHours * M_PARKING;
+                activityCost = (peakTime.equals("Y")) ? (hours * M_PEAK) : (hours * M_OFF_PEAK);
+                break;
+            case "P":
+                parkingCost = extraHoursSpentInHalfHours * PM_PARKING;
+                activityCost = (peakTime.equals("Y")) ? (hours * PM_PEAK) : (hours * PM_OFF_PEAK);
+                break;
+            case "E":
+                parkingCost = extraHoursSpentInHalfHours * EM_PARKING;
+                activityCost = (peakTime.equals("Y")) ? (hours * EM_PEAK) : (hours * EM_OFF_PEAK);
+                break;
+        }
+
+        discountPrice = (concessions.equals("Y")) ? ((parkingCost + activityCost) * CONCESSION_DISCOUNT) : 0;
+        totalCost = parkingCost + activityCost - discountPrice;
+
+        System.out.println("Activity Cost: $" + activityCost);
+        System.out.println("Parking Cost: $" + parkingCost);
+        System.out.println("Discount Price: $" + discountPrice);
+        System.out.println("Total Cost: $" + totalCost);
+    }
 }
