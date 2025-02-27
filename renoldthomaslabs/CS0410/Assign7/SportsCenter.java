@@ -1,5 +1,5 @@
 // Renold Thomas
-// SumOddSquares.java
+// SportsCenter.java
 // 27 February 2025 @ 10-10:50 AM
 // Program to prints the cost of the activity, the parking cost, the discount and the final price based on certain inputs.
 
@@ -31,13 +31,40 @@ public class SportsCenter {
         String membershipType;
         String peakTime;
         String concessions;
-        double hoursSpent;
+        double hoursSpentInHalfHours;
 
         double activityCost;
         double parkingCost;
         double discountPrice;
         double totalCost;
 
+        System.out.print("Which membership (N, M, P, E) do you have? ");
+        membershipType = input.next().toUpperCase();
+        while (!membershipType.equals("N") && !membershipType.equals("M") && !membershipType.equals("P") && !membershipType.equals("E")) {
+            System.out.print("Which membership (N, M, P, E) do you have? ");
+            membershipType = input.next().toUpperCase();
+        }
+
+        System.out.print("Are you coming during peak hours (Y/N)? ");
+        peakTime = input.next().toUpperCase();
+        while (!peakTime.equals("Y") && !peakTime.equals("N")) {
+            System.out.print("Are you coming during peak hours (Y/N)? ");
+            peakTime = input.next().toUpperCase();
+        }
+
+        System.out.print("Concessions (Y/N)? ");
+        concessions = input.next().toUpperCase();
+        while (!concessions.equals("Y") && !concessions.equals("N")) {
+            System.out.print("Concessions (Y/N)? ");
+            concessions = input.next().toUpperCase();
+        }
+
+        System.out.print("How long did you spend in the sports center (in hours)? ");
+        hoursSpentInHalfHours = input.nextDouble() * 2;
+        while (hoursSpentInHalfHours <= 0.0) {
+            System.out.print("How long did you spend in the sports center (in hours)? ");
+            hoursSpentInHalfHours = input.nextDouble() * 2;
+        }
     }
 
 }
