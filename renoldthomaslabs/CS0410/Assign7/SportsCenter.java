@@ -1,7 +1,7 @@
 // Renold Thomas
 // SportsCenter.java
 // 27 February 2025 @ 10-10:50 AM
-// Program to prints the cost of the activity, the parking cost, the discount and the final price based on certain inputs.
+// Program to prints the cost of the activity, the parking cost, the discount and the final price based on certain inputs
 
 package renoldthomaslabs.CS0410.Assign7;
 
