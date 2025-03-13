@@ -29,7 +29,7 @@ public class BarSales {
         productCode = input.next().toUpperCase();
         quantity = Integer.parseInt(input.next());
 
-        while (!productCode.equals("XXX") && quantity != -1) {
+        while (!(productCode.equals("XXX") && quantity == -1)) {
             boolean validInput = false;
             while (!validInput) {
                 switch (productCode) {
