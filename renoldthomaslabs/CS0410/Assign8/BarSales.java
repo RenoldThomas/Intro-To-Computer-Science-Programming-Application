@@ -14,7 +14,7 @@ public class BarSales {
         final double SNICKERS_PRICE = 1.99;
         final double PAYDAY_PRICE = 2.49;
         final double MILKYWAY_PRICE = 1.49;
-        
+
         Scanner input = new Scanner(System.in);
         String productCode;
         int quantity;
@@ -29,47 +29,68 @@ public class BarSales {
         productCode = input.next().toUpperCase();
         quantity = Integer.parseInt(input.next());
 
-        while (productCode != "XXX" && quantity != -1) {
+        while (!productCode.equals("XXX") && quantity != -1) {
+            boolean validInput = false;
+            while (!validInput) {
+                switch (productCode) {
+                    case "TWIX":
+                    case "KITKAT":
+                    case "SNICKERS":
+                    case "PAYDAY":
+                    case "MILKYWAY":
+                        if (quantity >= 0) {
+                            validInput = true; // Both product and quantity are valid
+                        } else {
+                            System.out.print("Error. Quantity cannot be negative. Re-enter product code and quantity: ");
+                            productCode = input.next().toUpperCase();
+                            quantity = Integer.parseInt(input.next());
+                        }
+                        break;
+                    default:
+                        System.out.print("Error. Invalid product code. Re-enter product code and quantity: ");
+                        productCode = input.next().toUpperCase();
+                        quantity = Integer.parseInt(input.next());
+                }
+            }
+
+            // Process the valid input and calculate the cost
             switch (productCode) {
                 case "TWIX":
-                    twixCost = TWIX_PRICE * quantity;
+                    twixCost += TWIX_PRICE * quantity;
                     break;
                 case "KITKAT":
-                    kitkatCost = KITKAT_PRICE * quantity;
+                    kitkatCost += KITKAT_PRICE * quantity;
                     break;
                 case "SNICKERS":
-                    snickersCost = SNICKERS_PRICE * quantity;
+                    snickersCost += SNICKERS_PRICE * quantity;
                     break;
                 case "PAYDAY":
-                    paydayCost = PAYDAY_PRICE * quantity;
+                    paydayCost += PAYDAY_PRICE * quantity;
                     break;
                 case "MILKYWAY":
-                    milkywayCost = MILKYWAY_PRICE * quantity;
+                    milkywayCost += MILKYWAY_PRICE * quantity;
                     break;
-                default:
-                    System.out.print("Error. Re-enter product code and quantity: ");
-                    productCode = input.next().toUpperCase();
-                    quantity = Integer.parseInt(input.next());
             }
             System.out.print("Please enter the product code and quantity: ");
             productCode = input.next().toUpperCase();
             quantity = Integer.parseInt(input.next());
         }
+
         totalCost = twixCost + kitkatCost + snickersCost + paydayCost + milkywayCost;
 
-        System.out.print("Twix: " + (int)(twixCost/TWIX_PRICE) + " items");
+        System.out.print("Twix: " + (int) (twixCost / TWIX_PRICE) + " items");
         System.out.printf("    Price = $%.2f\n", twixCost);
 
-        System.out.print("KitKat: " + (int)(kitkatCost/KITKAT_PRICE) + " items");
+        System.out.print("KitKat: " + (int) (kitkatCost / KITKAT_PRICE) + " items");
         System.out.printf("    Price = $%.2f \n", kitkatCost);
-        
-        System.out.print("Snickers: " + (int)(snickersCost/SNICKERS_PRICE) + " items");
+
+        System.out.print("Snickers: " + (int) (snickersCost / SNICKERS_PRICE) + " items");
         System.out.printf("    Price = $%.2f \n", snickersCost);
-        
-        System.out.print("PayDay: " + (int)(paydayCost/PAYDAY_PRICE) + " items");
+
+        System.out.print("PayDay: " + (int) (paydayCost / PAYDAY_PRICE) + " items");
         System.out.printf("    Price = $%.2f \n", paydayCost);
-        
-        System.out.print("MilkyWay: " + (int)(milkywayCost/MILKYWAY_PRICE) + " items");
+
+        System.out.print("MilkyWay: " + (int) (milkywayCost / MILKYWAY_PRICE) + " items");
         System.out.printf("    Price = $%.2f \n", milkywayCost);
 
         System.out.printf("Total Price: %.2f", totalCost);
