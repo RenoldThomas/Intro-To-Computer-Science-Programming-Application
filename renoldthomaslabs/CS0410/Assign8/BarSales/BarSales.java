@@ -3,7 +3,7 @@
 // 13 March 2025 @ 10-10:50 AM
 // Program that reads a series of sales as pairs of inputs– candy bar name and quantity sold and calculate the costs.
 
-package renoldthomaslabs.CS0410.Assign8;
+package renoldthomaslabs.CS0410.Assign8.BarSales;
 
 import java.util.Scanner;
 
