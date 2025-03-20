@@ -75,6 +75,7 @@ public class BarSales {
             productCode = input.next().toUpperCase();
             quantity = Integer.parseInt(input.next());
         }
+        input.close();
 
         totalCost = twixCost + kitkatCost + snickersCost + paydayCost + milkywayCost;
 

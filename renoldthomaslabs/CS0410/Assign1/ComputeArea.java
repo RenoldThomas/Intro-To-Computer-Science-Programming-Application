@@ -16,6 +16,7 @@ public class ComputeArea {
         // Prompt user to enter a radius
         System.out.println("Enter a number for radius: ");
         radius = input.nextDouble();
+        input.close();
 
         // Compute area
         area = radius * radius * 3.14159;

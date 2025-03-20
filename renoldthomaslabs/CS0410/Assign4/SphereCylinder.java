@@ -10,8 +10,6 @@ import java.util.Scanner;
 public class SphereCylinder {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-        double volume;
-        double surfaceArea;
         double answer;
         double radius;
         double height;
@@ -28,18 +26,22 @@ public class SphereCylinder {
         // Error handling for out of range values
         if (shape > 2) {
             System.out.println("Error: Invalid Number");
+            userInput.close();
             return;
         }
         if (shape < 1) {
             System.out.println("Error: Invalid Number");
+            userInput.close();
             return;
         }
         if (calculation > 2) {
             System.out.println("Error: Invalid Number");
+            userInput.close();
             return;
         }
         if (calculation < 1) {
             System.out.println("Error: Invalid Number");
+            userInput.close();
             return;
         }
 
@@ -73,6 +75,7 @@ public class SphereCylinder {
                 answer = (2 * Math.PI * radius * height) + (2 * Math.PI * Math.pow(radius, 2));
             }
         }
+        userInput.close();
         System.out.printf("Answer = %.4f", answer);
     }
 }

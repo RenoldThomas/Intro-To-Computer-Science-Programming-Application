@@ -15,6 +15,7 @@ public class SumOddSquares {
 
         System.out.print("Enter a positive odd integer (n): ");
         biggestNumber = input.nextInt();
+        input.close();
 
         while (!(biggestNumber > 0) || (biggestNumber % 2 != 1)) {
             System.out.print("Enter a positive odd integer (n): ");

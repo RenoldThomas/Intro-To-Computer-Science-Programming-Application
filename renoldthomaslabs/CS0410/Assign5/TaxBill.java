@@ -24,6 +24,7 @@ public class TaxBill {
         carValue = input.nextDouble();
         System.out.print("Enter your age: ");
         age = input.nextInt();
+        input.close();
         
         //Income tax calculations
         if (income < 9000) {

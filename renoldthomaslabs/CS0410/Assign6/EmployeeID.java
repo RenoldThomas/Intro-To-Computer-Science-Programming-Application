@@ -22,6 +22,7 @@ public class EmployeeID {
         department = input.next().toUpperCase();
         System.out.println("Enter your birth month (3 letter abbreviation): ");
         birthMonth = input.next().toUpperCase();
+        input.close();
 
         //Switch to determine the first letter of ID based on first character of last name
         switch (lastName.substring(0, 1)) {

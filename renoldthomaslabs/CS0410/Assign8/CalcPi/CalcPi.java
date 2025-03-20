@@ -14,6 +14,7 @@ public class CalcPi {
 
         System.out.print("Enter desired number of terms to calculate PI (1 - ∞): ");
         numOfTerms = input.nextInt();
+        input.close();
 
         for (int i = 1; i <= numOfTerms; i++)
             pi += (4*Math.pow(-1, i+1)/(2*i-1));

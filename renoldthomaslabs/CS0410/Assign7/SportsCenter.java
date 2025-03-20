@@ -66,6 +66,8 @@ public class SportsCenter {
             System.out.print("How long did you spend in the sports center (in hours)? ");
             hours = input.nextDouble();
         }
+        input.close();
+
         extraHoursSpentInHalfHours = (int) Math.ceil(Math.max(0, (hours-1) * 2));
 
         switch(membershipType) {

@@ -35,6 +35,7 @@ public class Pyramid {
             }
             
         }
+        input.close();
     }
 
     public static double volPyr(double width, double height) {

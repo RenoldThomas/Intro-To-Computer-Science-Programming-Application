@@ -19,6 +19,7 @@ public class SumSeries {
         highestPower = userInput.nextInt();
         System.out.println("Enter a real number for r (ratio): ");
         ratio = userInput.nextDouble();
+        userInput.close();
 
         // Sum Series Calculations
         sumSeries = ((Math.pow(ratio, highestPower + 1) - ratio) / (ratio - 1));
