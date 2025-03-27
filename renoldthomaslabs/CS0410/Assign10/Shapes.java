@@ -34,8 +34,6 @@ public class Shapes {
 
             if (choice == 10)
                 break;
-            // else if (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice
-            // == 5 || choice == 6 || choice == 7 || choice == 8 || choice == 9) {
             else {
                 switch (choice) {
                     case 1: // Calculate hypotenuse of a right triangle
@@ -47,8 +45,7 @@ public class Shapes {
                             if (base <= 0 || height <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.println(
-                                        "The hypotenuse of the right triangle is: " + hypotenuse(base, height) + "\n");
+                                System.out.printf("The hypotenuse of the right triangle is: %.3f\n\n", hypotenuse(base, height));
                                 base = 0;
                                 height = 0;
                                 break;
@@ -64,8 +61,7 @@ public class Shapes {
                             if (base <= 0 || height <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.println(
-                                        "The area of the right triangle is: " + areaOfTriangle(base, height) + "\n");
+                                System.out.printf("The area of the right triangle is: %.3f\n\n", areaOfTriangle(base, height));
                                 base = 0;
                                 height = 0;
                                 break;
@@ -81,8 +77,7 @@ public class Shapes {
                             if (base <= 0 || height <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.println("The perimeter of the right triangle is: "
-                                        + perimeterOfTriangle(base, height) + "\n");
+                                System.out.printf("The perimeter of the right triangle is: %.3f\n\n", perimeterOfTriangle(base, height));
                                 base = 0;
                                 height = 0;
                                 break;
@@ -98,8 +93,7 @@ public class Shapes {
                             if (length <= 0 || width <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.println(
-                                        "The area of the rectangle is: " + areaOfRectangle(length, width) + "\n");
+                                System.out.printf("The area of the rectangle is: %.3f\n\n", areaOfRectangle(length, width));
                                 length = 0;
                                 width = 0;
                                 break;
@@ -115,8 +109,7 @@ public class Shapes {
                             if (length <= 0 || width <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.println("The perimeter of the rectangle is: "
-                                        + perimeterOfRectangle(length, width) + "\n");
+                                System.out.printf("The perimeter of the rectangle is: %.3f\n\n", perimeterOfRectangle(length, width));
                                 length = 0;
                                 width = 0;
                                 break;
@@ -132,8 +125,7 @@ public class Shapes {
                             if (length <= 0 || width <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.println("The length of the diagonal of the rectangle is: "
-                                        + hypotenuse(length, width) + "\n");
+                                System.out.printf("The length of the diagonal of the rectangle is:%.3f\n\n", hypotenuse(length, width));
                                 length = 0;
                                 width = 0;
                                 break;
@@ -147,8 +139,7 @@ public class Shapes {
                             if (length <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.println(
-                                        "The area of the square is: " + areaOfRectangle(length, length) + "\n");
+                                System.out.printf("The area of the square is: %.3f\n\n", areaOfRectangle(length, length));
                                 length = 0;
                                 break;
                             }
@@ -161,8 +152,7 @@ public class Shapes {
                             if (length <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.println("The perimeter of the square is: "
-                                        + perimeterOfRectangle(length, length) + "\n");
+                                System.out.printf("The perimeter of the square is: %.3f\n\n", perimeterOfRectangle(length, length));
                                 length = 0;
                                 break;
                             }
@@ -175,8 +165,7 @@ public class Shapes {
                             if (length <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.println("The length of the diagonal of the square is: "
-                                        + hypotenuse(length, length) + "\n");
+                                System.out.printf("The length of the diagonal of the square is: %.3f\n\n", hypotenuse(length, length));
                                 length = 0;
                                 break;
                             }
