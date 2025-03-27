@@ -125,7 +125,7 @@ public class Shapes {
                             if (length <= 0 || width <= 0) {
                                 System.out.println("Invalid input. Please enter a positive number.");
                             } else {
-                                System.out.printf("The length of the diagonal of the rectangle is:%.3f\n\n", hypotenuse(length, width));
+                                System.out.printf("The length of the diagonal of the rectangle is: %.3f\n\n", hypotenuse(length, width));
                                 length = 0;
                                 width = 0;
                                 break;
