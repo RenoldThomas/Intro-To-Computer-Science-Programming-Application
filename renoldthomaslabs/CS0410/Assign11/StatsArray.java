@@ -12,6 +12,7 @@ public class StatsArray {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the size of the array: ");
         int size = input.nextInt();
+        input.close();
 
         int[] numbers = new int[size];
         System.out.println("Enter " + size + " integers:");
